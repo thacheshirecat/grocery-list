@@ -6,16 +6,16 @@ $(document).ready(function(){
     event.preventDefault();
     $("#grocery-list").hide();
 
-    var newGuy = []
+    var capitalList = []
 
     inputs.forEach(function(input){
         var userInput = $("input#" + input).val();
-        newGuy.push(userInput);
+        capitalList.push(userInput);
     });
 
-    newGuy.sort();
+    capitalList.sort();
 
-    newGuy.forEach(function(input){
+    capitalList.forEach(function(input){
     $("#finished-list").append("<li>" + input.toUpperCase() + "</li>");
     $("#ordered-list-div").show();
   });
